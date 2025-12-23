@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>لوحة الإدارة</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{font-family:Arial;background:#111;color:#fff;padding:20px}
+input,button{width:100%;padding:10px;margin:8px 0}
+button{background:#c9a14a;color:#000;font-weight:bold}
+.card{background:#222;padding:15px;border-radius:8px}
+</style>
+</head>
+
+<body>
+
+<h2>🔐 دخول الأدمن</h2>
+
+<div id="login">
+  <input type="password" id="pass" placeholder="كلمة السر">
+  <button onclick="login()">دخول</button>
+</div>
+
+<div id="admin" style="display:none">
+  <h3>➕ إضافة منتج</h3>
+
+  <input id="name" placeholder="اسم المنتج">
+  <input id="price" placeholder="السعر">
+  <input id="img" placeholder="رابط الصورة">
+  <button onclick="addProduct()">إضافة</button>
+
+  <pre id="result"></pre>
+</div>
+
+<script>
+const PASSWORD = "1234"; // غيرها بعدين
+
+function login(){
+  if(document.getElementById("pass").value === PASSWORD){
+    document.getElementById("login").style.display="none";
+    document.getElementById("admin").style.display="block";
+  }else{
+    alert("كلمة السر غلط");
+  }
+}
+
+function addProduct(){
+  const p = {
+    name: name.value,
+    price: price.value,
+    img: img.value
+  };
+
+  let products = JSON.parse(localStorage.getItem("products") || "[]");
+  products.push(p);
+  localStorage.setItem("products", JSON.stringify(products));
+
+  result.textContent = "✔ تم حفظ المنتج";
+}
+</script>
+
+</body>
+</html>
