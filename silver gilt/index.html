@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Silver Jilt | سلفر جلت</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- 🔥 ربط ملف التصميم -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo logo-animate">Silver Jilt</div>
+
+  <nav>
+    <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+    <a href="#products" data-ar="المنتجات" data-en="Products">المنتجات</a>
+    <a href="#offers" data-ar="العروض" data-en="Offers">العروض</a>
+    <a href="#about" data-ar="عنّا" data-en="About">عنّا</a>
+    <a href="#contact" data-ar="تواصل" data-en="Contact">تواصل</a>
+  </nav>
+
+  <button class="lang-btn" onclick="toggleLang()">EN</button>
+</header>
+
+<section class="hero" id="home">
+  <h1 class="reveal"
+      data-ar="أجمل تصاميم الفضة بإتقان وأناقة"
+      data-en="Finest Silver Jewelry Crafted with Elegance">
+      أجمل تصاميم الفضة بإتقان وأناقة
+  </h1>
+
+  <p class="reveal delay-1"
+     data-ar="سلفر جلت – حيث تلتقي الفخامة بالجودة"
+     data-en="Silver Jilt – Where Luxury Meets Quality">
+     سلفر جلت – حيث تلتقي الفخامة بالجودة
+  </p>
+</section>
+
+<section class="section" id="products">
+  <h2 data-ar="المنتجات" data-en="Products">المنتجات</h2>
+  <div class="products-grid" id="productsGrid"></div>
+</section>
+
+<section class="section" id="offers">
+  <h2 data-ar="العروض" data-en="Offers">العروض</h2>
+  <div class="products-grid" id="offersGrid"></div>
+</section>
+
+<section class="section about" id="about">
+  <h2 data-ar="عن سلفر جلت" data-en="About Silver Jilt">عن سلفر جلت</h2>
+  <p
+    data-ar="سلفر جلت متجر متخصص في بيع الفضة والإكسسوارات الراقية، نختار قطعنا بعناية لنقدّم لعملائنا الجودة، الأناقة، والثقة."
+    data-en="Silver Jilt is a specialized silver jewelry store, carefully selecting elegant pieces to deliver quality, style, and trust.">
+    سلفر جلت متجر متخصص في بيع الفضة والإكسسوارات الراقية، نختار قطعنا بعناية لنقدّم لعملائنا الجودة، الأناقة، والثقة.
+  </p>
+</section>
+
+<section class="section contact" id="contact">
+  <h2 data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h2>
+  <a class="whatsapp-btn" href="https://wa.me/967774399915" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    WhatsApp
+  </a>
+</section>
+
+<!-- 🔥 ربط ملف الجافاسكربت -->
+<script src="script.js"></script>
+
+</body>
+</html>
