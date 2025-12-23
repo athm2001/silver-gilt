@@ -1,141 +1,184 @@
-/* ====== Reset ====== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', 'Tajawal', sans-serif;
+:root{
+  --black:#000;
+  --dark:#0f0f0f;
+  --silver:#cfcfcf;
+  --white:#fff;
 }
 
-/* ====== Body ====== */
-body {
-  background: #0d0d0d;
-  color: #e5e5e5;
-  line-height: 1.6;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* ====== Header ====== */
-.header {
-  padding: 40px 20px;
-  text-align: center;
-  background: linear-gradient(135deg, #111, #000);
-  border-bottom: 1px solid #333;
+body{
+  font-family:'Tajawal','Poppins',sans-serif;
+  background:#000;
+  color:#fff;
+  line-height:1.6;
 }
 
-.header h1 {
-  font-size: 38px;
-  letter-spacing: 3px;
-  color: silver;
+/* Header */
+header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:#111;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
 }
 
-.header p {
-  margin-top: 10px;
-  color: #aaa;
+.logo{
+  font-size:26px;
+  font-weight:600;
+  color:var(--silver);
 }
 
-/* ====== Hero ====== */
-.hero {
-  padding: 60px 20px;
-  text-align: center;
+nav{
+  display:flex;
+  gap:25px;
 }
 
-.hero h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
-  color: #f5f5f5;
+nav a{
+  color:#ddd;
+  text-decoration:none;
 }
 
-.hero p {
-  max-width: 600px;
-  margin: auto;
-  color: #bbb;
+nav a:hover{
+  color:var(--silver);
 }
 
-/* ====== Products ====== */
-.products {
-  padding: 60px 20px;
+.lang-btn{
+  background:transparent;
+  border:1px solid var(--silver);
+  color:var(--silver);
+  padding:6px 14px;
+  border-radius:20px;
+  cursor:pointer;
 }
 
-.products h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 28px;
-  color: silver;
+/* Hero */
+.hero{
+  height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+    url("https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0")
+    center/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 }
 
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+.hero h1{
+  font-size:46px;
 }
 
-/* ====== Product Card ====== */
-.product {
-  background: #111;
-  border: 1px solid #2a2a2a;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.hero p{
+  font-size:18px;
+  color:#ccc;
 }
 
-.product:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(192,192,192,0.15);
+/* Sections */
+.section{
+  padding:80px 40px;
 }
 
-.product img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
+.section h2{
+  text-align:center;
+  margin-bottom:50px;
+  color:var(--silver);
 }
 
-.product .info {
-  padding: 15px;
-  text-align: center;
+/* Products */
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:30px;
 }
 
-.product h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
+.product-card{
+  background:#111;
+  border:1px solid #222;
+  border-radius:14px;
+  overflow:hidden;
+  transition:.4s;
 }
 
-.product span {
-  display: block;
-  margin-bottom: 12px;
-  color: silver;
-  font-weight: bold;
+.product-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 10px 30px rgba(207,207,207,.15);
 }
 
-/* ====== WhatsApp Button ====== */
-.product a {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: 30px;
-  background: silver;
-  color: #000;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
+.product-card img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
 }
 
-.product a:hover {
-  background: #fff;
+.product-card .info{
+  padding:18px;
+  text-align:center;
 }
 
-/* ====== Footer ====== */
-footer {
-  text-align: center;
-  padding: 25px;
-  border-top: 1px solid #222;
-  color: #777;
-  font-size: 14px;
+.product-card button{
+  background:transparent;
+  border:1px solid var(--silver);
+  color:var(--silver);
+  padding:8px 16px;
+  border-radius:20px;
+  cursor:pointer;
 }
 
-/* ====== Mobile ====== */
-@media (max-width: 600px) {
-  .header h1 {
-    font-size: 30px;
-  }
-  .hero h2 {
-    font-size: 24px;
-  }
+/* About */
+.about p{
+  max-width:700px;
+  margin:auto;
+  text-align:center;
+  color:#ccc;
 }
+
+/* Contact */
+.contact{
+  text-align:center;
+}
+
+.whatsapp-btn{
+  display:inline-flex;
+  gap:10px;
+  background:#25D366;
+  color:#fff;
+  padding:14px 30px;
+  border-radius:40px;
+  text-decoration:none;
+  font-size:18px;
+}
+
+/* Animations */
+.logo-animate{
+  animation:floatLogo 4s ease-in-out infinite;
+  text-shadow:0 0 15px rgba(207,207,207,.3);
+}
+
+@keyframes floatLogo{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+  100%{transform:translateY(0)}
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(25px);
+  transition:1.1s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.delay-1{transition-delay:.3s;}
+
