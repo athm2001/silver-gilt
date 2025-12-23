@@ -254,5 +254,46 @@ nav a:hover{
   }
 }
 
+.social-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.social-btn i {
+  font-size: 18px;
+}
+
+.social-btn.whatsapp {
+  background: #25d366;
+}
+
+.social-btn.instagram {
+  background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af);
+}
+
+.social-btn.facebook {
+  background: #1877f2;
+}
+
+.social-btn:hover {
+  transform: scale(1.05);
+}
+
+
 
 
